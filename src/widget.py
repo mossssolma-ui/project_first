@@ -16,6 +16,12 @@ def mask_account_card(account_card: str) -> str:
     return result
 
 
+def get_date(date):
+    new_date = date.split('-')
+    result = f"{new_date[2][:2]}.{new_date[1]}.{new_date[0]}"
+    return result
+
+
 # данные для проверки
 lst = ["Maestro 1596837868705199",
        "Счет 64686473678894779589",
@@ -28,3 +34,5 @@ lst = ["Maestro 1596837868705199",
 
 for i in lst:
     print(mask_account_card(i))
+
+# данные для проверки даты
